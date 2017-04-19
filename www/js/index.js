@@ -99,21 +99,20 @@ var app = {
         listReviews();
         
         function closeModal(ev) {
-             ev.preventDefault;
-            let clickedLink = ev.target.id;
+           
             
             document.getElementById("itemName").value = "";
             rating=3;
             
             document.getElementById("TakePicReview").style.display="block";
             document.getElementById("saveAddReview").style.display="none";
-            document.getElementById("reviewModal").classList.remove('active');
+            
             document.getElementById("personError").innerHTML="";
             document.getElementById('cameraimage').innerHTML="";
             app.currentReview = null;
             
             
-            document.getElementById("deleteModal").classList.remove('active');
+           
            
             document.getElementById('itemImg').innerHTML="";
             document.getElementById("saveAddReview").style.display="none";
