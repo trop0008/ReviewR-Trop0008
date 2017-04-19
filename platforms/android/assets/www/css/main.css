@@ -1,0 +1,112 @@
+.card {
+    margin: 0;
+    padding: 1rem;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+    height: 95%;
+    vertical-align: middle;
+    text-align: center;
+    
+}
+
+.card img {
+    display: block;
+    clear: both;
+    margin: auto auto;
+    border: 5px solid #ddd;
+    border-radius: 50%;
+    width: 50vh;
+}
+
+.delete,
+.saved {
+    
+    font-size: 3.5rem;
+    vertical-align: middle;
+    margin-top: 15vh;
+    text-align: center;
+    
+    
+     
+}
+.activeSwipe {
+    
+    opacity: 0;
+   
+    transform:  scale(0.1);
+    border-radius: 50%;
+    width: 100vw;
+     height: 100vw;
+    transition: transform 1s ease-in, opacity 3s ease;
+}
+
+.delete {
+    color: #87071F;
+}
+
+.saved {
+    color: #16193B;
+}
+
+.card h1,
+.card h2,
+.card p {
+    padding-top: 0.5rem;
+    text-align: center;
+}
+
+.male,
+.male p {
+    background-color: #ADD5F7;
+    color: #16193B;
+}
+
+.female,
+.female p {
+    background-color: #FFD8E6;
+    color: #87071F;
+}
+
+.male img {
+    border-color: #16193B;
+}
+
+.female img {
+    border-color: #87071F;
+}
+
+.icon-trash {
+  
+    font-size: 2.5rem;
+  
+
+}
+
+.table-view-cell {
+
+    padding: 11px 35px 11px 15px;
+
+
+}
+
+
+.media img {
+    display: flex;
+    flex-flow: row;
+    width: 42px;
+    
+}
+
+.content .media-object{
+        width: 42px;
+}
+
+.media div {
+    display: flex;
+    flex-flow: row;
+    width: 42px;
+    
+}
+

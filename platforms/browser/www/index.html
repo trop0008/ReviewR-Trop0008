@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com http://trop0008.edumedia.ca  'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content: trop0008.edumedia.ca  placeholdit.imgix.net placehold.it ;" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!--<meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">-->
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.css" rel="stylesheet" />
+    <!--<link href="css/ratchet-theme-ios.css" rel="stylesheet" />-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- include the compiled Ratchet JS -->
+    <script src="js/ratchet.min.js"></script>
+    <title>ReviewR</title>
+</head>
+
+<body>
+    <header class="bar bar-nav"> <a href="#reviewModal" class="btn btn-link btn-nav pull-right">
+                Add Review
+                <span class="icon icon-compose"></span>
+            </a>
+        <h1 class="title">ReviewR</h1> </header>
+    <div class="content" id="reviewList">
+      <h3 class="pageheader" id="pagehead">List of Reviews </h3>
+       
+        <!-- read through localStorage for contacts -->
+        <ul class="table-view" id="review-list"> </ul>
+    </div>
+    <div id="reviewModal" class="modal">
+        <header class="bar bar-nav">
+            <a href="#reviewModal" class="icon icon-close pull-right" id="closeAddReview"></a>
+            <h1 class="title" id="headertitle">Add Review </h1> </header>
+        <div class="content">
+            <div class="content-padded">
+                <form class="input-group">
+                    <div class="input-row">
+                        <label>Item</label>
+                        <input type="text" placeholder="Item" id="itemName" /> </div>
+                    <div class="review-row">
+                        <label>Rating</label>
+                        <ul class="table-view" id="review-form">
+                            <li class="table-view-cell-star"><div class="stars"> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span></div> </li>
+                        </ul>
+                        <!-- moment(note.time).format('MMM Do YYYY, h:mm:ss a');  -->
+                    </div>
+                </form>
+                <div class='card' id='cameraimage'></div>
+                <p class="content-padded">
+                   
+                   <button id="TakePicReview" class="btn btn-positive btn-block">
+                           <span class="icon icon-play"></span>
+                           Take Picture 
+                       </button>
+                       <button id="cancelAddReview" class="btn btn-negative btn-block">
+                           <span class="icon icon-close"></span>
+                           Cancel 
+                       </button>
+                       <button id="saveAddReview" class="btn btn-primary btn-block">
+                           <span class="icon icon-check"></span>
+                           Save  
+                       </button>
+                    
+                </p>
+                <p class="content-padded errormessage" id="personError"> </p>
+            </div>
+        </div>
+    </div>
+    <div id="deleteModal" class="modal">
+        <header class="bar bar-nav">
+            <a href="#deleteModal" class="btn btn-link btn-nav pull-left"> <span class="icon icon-left-nav"></span> Back </a>
+            <a href="#deleteModal" class="icon icon-close pull-right" id="closeAddPerson"></a>
+            <h1 class="title" id="headertitle">Delete Review </h1> </header>
+        <div class="content">
+            <div class="content-padded">
+               <div class="card" id='itemImg'></div>
+               <h4 id="deleteItemName" class="deleteReview"></h4>
+               <div class="deleteReview">
+                <div class="stars" id="deleteStar"> </div>
+                </div>
+                <p>
+                    <button class="btn btn-block" id="cancelDeleteReview"> <span class="icon icon-close"></span> Cancel
+                        <!-- dispatch click to the close button -->
+                    </button>
+                    <button class="btn btn-primary btn-block" id="saveDeleteReview"> <span class="icon icon-check"></span> Delete
+                        <!-- process the info then dispatch click to the close button -->
+                    </button>
+                </p>
+                <p class="content-padded errormessage" id="personError"> </p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/moment-with-locales.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

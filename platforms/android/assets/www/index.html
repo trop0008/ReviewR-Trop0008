@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com http://trop0008.edumedia.ca  'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content: trop0008.edumedia.ca  placeholdit.imgix.net placehold.it ;"/>
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="msapplication-tap-highlight" content="no"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+        <!--<meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">-->
+        <!-- Include the compiled Ratchet CSS -->
+        <link href="css/ratchet.css" rel="stylesheet" />
+        <!--<link href="css/ratchet-theme-ios.css" rel="stylesheet" />-->
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <!-- include the compiled Ratchet JS -->
+        <script src="js/ratchet.min.js"></script>
+        <title>ReviewR</title>
+        
+    </head>
+    <body>
+        <header class="bar bar-nav">
+           <a  class="btn btn-link btn-nav pull-left"   >
+                <span class="icon icon-left-nav"></span>
+                Back
+            </a>
+            
+            <a href="#reviewModal" class="btn btn-link btn-nav pull-right">
+                Add Person
+                <span class="icon icon-compose"></span>
+            </a>
+            <h1 class="title">ReviewR</h1>
+        </header>
+        
+        
+        <div class="content" id="birthdayList">
+            <!-- read through localStorage for contacts -->
+            
+            <ul class="table-view" id="contact-list">
+
+            </ul>
+        </div>
+        
+        <div id="reviewModal" class="modal">
+        
+            <header class="bar bar-nav">
+                
+                 <a href="#reviewModal" class="icon icon-close pull-right" id="closeAddPerson"  ></a>
+                <h1 class="title" id="headertitle">Add Review </h1>
+            </header>
+
+            <div class="content" >
+                <div class="content-padded">
+                    <form class="input-group">
+                        <div class="input-row">
+                            <label>Full name</label>
+                            <input type="text" placeholder="First Last" id="contactName"/>
+                        </div>
+                        <div class="input-row">
+                            <label>D.O.B.</label>
+                            <input type="date" placeholder="yyyy-mm-dd" id="doBirth"/>
+                            <!-- moment(note.time).format('MMM Do YYYY, h:mm:ss a');  -->
+                        </div>
+                    </form>
+                    <p class="content-padded">
+                        <button class="btn btn-block" id="cancelAddPerson">
+                            <span class="icon icon-close"></span>
+                            Cancel <!-- dispatch click to the close button -->
+                        </button>
+                        <button class="btn btn-primary btn-block" id="saveAddPerson">
+                            <span class="icon icon-check"></span>
+                            Save  <!-- process the info then dispatch click to the close button -->
+                        </button>
+                    </p>
+                    <p class="content-padded errormessage" id="personError">
+                    
+                </p>
+                </div>
+            </div>
+        </div>
+        <div id="deleteModal" class="modal">
+        
+            <header class="bar bar-nav">
+                
+                 <a href="#reviewModal" class="icon icon-close pull-right" id="closeAddPerson"  ></a>
+                <h1 class="title" id="headertitle">Add Review </h1>
+            </header>
+
+            <div class="content" >
+                <div class="content-padded">
+                    <form class="input-group">
+                        <div class="input-row">
+                            <label>Full name</label>
+                            <input type="text" placeholder="First Last" id="contactName"/>
+                        </div>
+                        <div class="input-row">
+                            <label>D.O.B.</label>
+                            <input type="date" placeholder="yyyy-mm-dd" id="doBirth"/>
+                            <!-- moment(note.time).format('MMM Do YYYY, h:mm:ss a');  -->
+                        </div>
+                    </form>
+                    <p class="content-padded">
+                        <button class="btn btn-block" id="cancelAddPerson">
+                            <span class="icon icon-close"></span>
+                            Cancel <!-- dispatch click to the close button -->
+                        </button>
+                        <button class="btn btn-primary btn-block" id="saveAddPerson">
+                            <span class="icon icon-check"></span>
+                            Save  <!-- process the info then dispatch click to the close button -->
+                        </button>
+                    </p>
+                    <p class="content-padded errormessage" id="personError">
+                    
+                </p>
+                </div>
+            </div>
+        </div>
+
+        
+        <script type="text/javascript" src="cordova.js"></script>
+
+      
+        <script src="js/moment-with-locales.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
