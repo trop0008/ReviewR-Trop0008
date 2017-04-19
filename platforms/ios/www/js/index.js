@@ -92,8 +92,9 @@ var app = {
         document.getElementById("saveAddReview").addEventListener("click", saveModal);
         document.getElementById("closeAddReview").addEventListener("touchstart", closeModal);
         document.getElementById("saveAddReview").style.display="none";
-        document.getElementById("saveDeleteReview").addEventListener("click", deleteIdea);
-        
+        document.getElementById("saveDeleteReview").addEventListener("click", deleteReview);
+        document.getElementById("cancelDeleteReview").addEventListener("click", cancelModal);
+        document.getElementById("closeRemoveReview").addEventListener("touchstart", closeModal);
         getLocalStorage();
         listReviews();
         
@@ -108,9 +109,16 @@ var app = {
             document.getElementById("saveAddReview").style.display="none";
             document.getElementById("reviewModal").classList.remove('active');
             document.getElementById("personError").innerHTML="";
-               document.getElementById('cameraimage').innerHTML="";
+            document.getElementById('cameraimage').innerHTML="";
+            app.currentReview = null;
             
-                app.currentReview = null;
+            
+            document.getElementById("deleteModal").classList.remove('active');
+           
+            document.getElementById('itemImg').innerHTML="";
+            document.getElementById("saveAddReview").style.display="none";
+            document.getElementById("personError").innerHTML="";
+            
         }
 
         function cancelModal(ev) {
@@ -124,11 +132,19 @@ var app = {
             document.getElementById("saveAddReview").style.display="none";
             document.getElementById("reviewModal").classList.remove('active');
             document.getElementById("personError").innerHTML="";
-               document.getElementById('cameraimage').innerHTML="";
+            document.getElementById('cameraimage').innerHTML="";
+            app.currentReview = null;
             
-                app.currentReview = null;
+            
+            document.getElementById("deleteModal").classList.remove('active');
+           
+            document.getElementById('itemImg').innerHTML="";
+            document.getElementById("saveAddReview").style.display="none";
+            document.getElementById("personError").innerHTML="";
+            
             
         }
+        
 
         function showModal() {
              document.getElementById("reviewModal").classList.add('active');
@@ -167,7 +183,7 @@ var app = {
         }
         
         /********* Delete review *************/
-        function deleteIdea(ev) {
+        function deleteReview(ev) {
                             ev.preventDefault;
                             
                             app.savedListReviews.reviews.splice(deleteIndex, 1);
