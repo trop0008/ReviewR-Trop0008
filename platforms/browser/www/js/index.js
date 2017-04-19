@@ -55,6 +55,7 @@ var app = {
         let currentIdeas = null;
         let rating = 3;
         let stars = null;
+        let deleteIndex;
         stars = document.querySelectorAll('.star');
         addListeners();
         setRating();
@@ -91,23 +92,32 @@ var app = {
         document.getElementById("saveAddReview").addEventListener("click", saveModal);
         document.getElementById("closeAddReview").addEventListener("touchstart", closeModal);
         document.getElementById("saveAddReview").style.display="none";
+        document.getElementById("saveDeleteReview").addEventListener("click", deleteReview);
+        document.getElementById("cancelDeleteReview").addEventListener("click", cancelModal);
+        document.getElementById("closeRemoveReview").addEventListener("touchstart", closeModal);
         getLocalStorage();
         listReviews();
         
         function closeModal(ev) {
-             ev.preventDefault;
-            let clickedLink = ev.target.id;
+           
             
             document.getElementById("itemName").value = "";
             rating=3;
             
             document.getElementById("TakePicReview").style.display="block";
             document.getElementById("saveAddReview").style.display="none";
-            document.getElementById("reviewModal").classList.remove('active');
-            document.getElementById("personError").innerHTML="";
-               document.getElementById('cameraimage').innerHTML="";
             
-                app.currentReview = null;
+            document.getElementById("personError").innerHTML="";
+            document.getElementById('cameraimage').innerHTML="";
+            app.currentReview = null;
+            
+            
+           
+           
+            document.getElementById('itemImg').innerHTML="";
+            document.getElementById("saveAddReview").style.display="none";
+            document.getElementById("personError").innerHTML="";
+            
         }
 
         function cancelModal(ev) {
@@ -121,11 +131,19 @@ var app = {
             document.getElementById("saveAddReview").style.display="none";
             document.getElementById("reviewModal").classList.remove('active');
             document.getElementById("personError").innerHTML="";
-               document.getElementById('cameraimage').innerHTML="";
+            document.getElementById('cameraimage').innerHTML="";
+            app.currentReview = null;
             
-                app.currentReview = null;
+            
+            document.getElementById("deleteModal").classList.remove('active');
+           
+            document.getElementById('itemImg').innerHTML="";
+            document.getElementById("saveAddReview").style.display="none";
+            document.getElementById("personError").innerHTML="";
+            
             
         }
+        
 
         function showModal() {
              document.getElementById("reviewModal").classList.add('active');
@@ -162,6 +180,30 @@ var app = {
             }
       
         }
+        
+        /********* Delete review *************/
+        function deleteReview(ev) {
+                            ev.preventDefault;
+                            
+                            app.savedListReviews.reviews.splice(deleteIndex, 1);
+                            setLocalStorage();
+                            listReviews(); 
+                        
+                    rating=3;
+            
+                    document.getElementById("TakePicReview").style.display="block";
+                    document.getElementById("reviewModal").classList.remove('active');
+            
+                    document.getElementById("deleteModal").classList.remove('active');
+                    document.getElementById('cameraimage').innerHTML="";
+                    document.getElementById('itemImg').innerHTML="";
+                    document.getElementById("saveAddReview").style.display="none";
+                    document.getElementById("personError").innerHTML="";
+                    app.currentReview = null;
+                           
+                            
+                        
+                        }
         /***************************/
         function saveModal(ev) {
            ev.preventDefault;
@@ -191,7 +233,7 @@ var app = {
                     
                 }
                 else {
-                    document.getElementById("personError").innerHTML= "Please make enter an item name.";
+                    document.getElementById("personError").innerHTML= "Please enter an item name.";
                 }
                 
             
@@ -260,17 +302,19 @@ var app = {
                             app.currentReview = savedReview;
                             
                             let imgDiv = document.getElementById('itemImg');
+                            imgDiv.innerHTML="";
                             let image = document.createElement('img');
                             image.src = savedReview.img;
                             imgDiv.appendChild(image);
                             document.getElementById('deleteItemName').innerHTML= savedReview.name;
                             rating=savedReview.rating;
-                            let div = document.getElementById('cameraimage');
+                            let div = document.getElementById('itemImg');
                             let starDiv= document.getElementById('deleteStar');
-                            
+                            starDiv.innerHTML="";
+                            deleteIndex= index;
                              for(let n = 0; n < savedReview.rating; n++){
                                  let spanStar = document.createElement("span");
-                                 spanStar.className = "goldstar";
+                                 spanStar.className = "star rated";
                                  console.log(n);
                                  starDiv.appendChild(spanStar);
                                  
@@ -292,81 +336,8 @@ var app = {
                 header.innerHTML = "You do not have any reviews. Please use the Add Review button on the top right corner to create a Review. ";
             }
         }
-        /********************* list gifts ********************/
-        function listGifts() {
-            let giftList = document.getElementById('giftList');
-            giftList.innerHTML = "";
-            let header = document.createElement("h3");
-            header.className = "giftheader";
-            if (app.currentReview.ideas != null) {
-                if (app.currentReview.ideas.length == 0) {
-                    header.innerHTML = "You have not added any gift ideas for " + app.currentReview.name + ". Please use the Add Idea button on the top right corner to create a gift idea. ";
-                    giftList.appendChild(header);
-                }
-                else {
-                    header.innerHTML = "Gift Ideas for " + app.currentReview.name;
-                    let ul = document.createElement("ul");
-                    ul.className = "table-view";
-                    app.currentReview.ideas.forEach(function (idea, index) {
-                        // the saved list items are created here
-                        let li = document.createElement("li");
-                        li.className = "table-view-cell media";
-                        let span = document.createElement("span");
-                        span.className = "pull-right icon icon-trash midline";
-                        let div = document.createElement("div");
-                        div.className = "media-body";
-                        div.innerHTML = idea.idea;
-                        if (idea.at) {
-                            let p1 = document.createElement('p');
-                            p1.innerHTML = idea.at;
-                            div.appendChild(p1);
-                        }
-                        if (idea.url) {
-                            let p2 = document.createElement('p');
-                            let urlLink = document.createElement('a');
-                            urlLink.href = idea.url;
-                            urlLink.innerHTML = idea.url;
-                            urlLink.target = "_system";
-                            p2.appendChild(urlLink);
-                            div.appendChild(p2);
-                        }
-                        if (idea.cost) {
-                            let p3 = document.createElement('p');
-                            p3.innerHTML = idea.cost;
-                            div.appendChild(p3);
-                        }
-                        li.appendChild(span);
-                        li.appendChild(div);
-                        ul.appendChild(li);
-                        span.addEventListener("click", deleteIdea);
-
-                        function deleteIdea(ev) {
-                            ev.preventDefault;
-                            let indexcheck = app.savedListReviews.people.map(function (e) {
-                                return e.id;
-                            }).indexOf(app.currentReview.id);
-                            let indexidea = app.currentReview.ideas.map(function (e) {
-                                return e.giftid;
-                            }).indexOf(idea.giftid);
-                            app.currentReview.ideas.splice(indexidea, 1);
-                            listGifts();
-                            app.savedListReviews.people[indexcheck].ideas = app.currentReview.ideas;
-                            setLocalStorage();
-                        }
-
-                        function viewGifts(ev) {
-                            ev.preventDefault;
-                            app.currentReview = person;
-                        }
-                    });
-                    giftList.appendChild(header);
-                    giftList.appendChild(ul);
-                }
-            }
-            else {
-                showModal();
-            }
-        }
+        
+       
     }
 };
 app.initialize();

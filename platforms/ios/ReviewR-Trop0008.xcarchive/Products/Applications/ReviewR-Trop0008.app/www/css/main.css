@@ -133,9 +133,9 @@ span.name{
 
 .star{
   color: goldenrod;
-  font-size: 1rem;
+  font-size: 1.2rem;
   position: relative;
-  padding: 0 0.9rem; /* space out the stars */
+  padding: 0 0.7rem; /* space out the stars */
 }
 .star::before{
   position:absolute;

@@ -86,7 +86,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		/R0WVt84i1a36jjxU73K2hJdeFg=
+		BzC+Exa4BpFEC6osROmSuF/VBSI=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		4mLo/D3HJurwPgOjMpK1YOD6Fk8=
+		R6yaljDvIgTb7aZmzMapmzsbBNk=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -158,7 +158,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		QbV8p2E6TypkkNS1fyR+6FNDZP0=
+		zehKb/0BeqPZFi+gPRhGDR/SMPw=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -198,7 +198,7 @@
 		</data>
 		<key>www/css/main.css</key>
 		<data>
-		L3xwTVLcLBtcvXBVHkc5wJt8JTY=
+		hJxUSciEjilMnFbZDkRIIhxutKE=
 		</data>
 		<key>www/css/ratchet-theme-android.css</key>
 		<data>
@@ -523,11 +523,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/R0WVt84i1a36jjxU73K2hJdeFg=
+			BzC+Exa4BpFEC6osROmSuF/VBSI=
 			</data>
 			<key>hash2</key>
 			<data>
-			IeTQ9lZk9R3krgJco4bYqXg9ImwJj1n3CUJQD0gZ/MQ=
+			kyBE+z2kgXpGNouUpT0990PpgZ/SV2D+escWaL6SlUg=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -545,11 +545,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4mLo/D3HJurwPgOjMpK1YOD6Fk8=
+			R6yaljDvIgTb7aZmzMapmzsbBNk=
 			</data>
 			<key>hash2</key>
 			<data>
-			4OY6gtkvA6eeZQli0fq/fHatDHpUl1NYaCM7yvd8hLY=
+			j1iWCy+n1u+L9CIHSODs6ZyqsJE6afPaFH573EV0+J0=
 			</data>
 		</dict>
 		<key>LaunchImage-568h@2x.png</key>
@@ -710,11 +710,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QbV8p2E6TypkkNS1fyR+6FNDZP0=
+			zehKb/0BeqPZFi+gPRhGDR/SMPw=
 			</data>
 			<key>hash2</key>
 			<data>
-			BfOJOkfexPBjHXR2W3GFURWf77IqFsDgQLtMlLJFkP8=
+			wBCQhFnCpsWPqiePlz/ojdnx9LaTRM+sVgpAEiY/vLE=
 			</data>
 		</dict>
 		<key>archived-expanded-entitlements.xcent</key>
@@ -809,11 +809,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			L3xwTVLcLBtcvXBVHkc5wJt8JTY=
+			hJxUSciEjilMnFbZDkRIIhxutKE=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ln3BUitZIfdalOD/eZgUSGTwQVTCvkwRA/RN9qHin2s=
+			1epTf/aVCmEoYm1XGq9JWdjqEJKn8PlaKaCsvpVx5CA=
 			</data>
 		</dict>
 		<key>www/css/ratchet-theme-android.css</key>

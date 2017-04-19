@@ -133,9 +133,9 @@ span.name{
 
 .star{
   color: goldenrod;
-  font-size: 1rem;
+  font-size: 1.2rem;
   position: relative;
-  padding: 0 0.9rem; /* space out the stars */
+  padding: 0 0.7rem; /* space out the stars */
 }
 .star::before{
   position:absolute;
@@ -153,15 +153,7 @@ span.name{
   /* the :hover should come first */
   content: '\2605' !important;
 }
-.goldstar{
-  content: '\2605' !important;
-  color: goldenrod;
-  font-size: 1.0rem;
-  position: relative;
-  padding: 0 0.5rem; 
-  
-    
-}
+
 
 header{
     margin-top: 5px;
@@ -199,6 +191,7 @@ header{
   border: 0;
 }
 .deleteReview{
+    padding: 15px;
     text-align: center;
 }
 
