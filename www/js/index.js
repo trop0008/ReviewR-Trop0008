@@ -117,7 +117,7 @@ var app = {
             document.getElementById('itemImg').innerHTML="";
             document.getElementById("saveAddReview").style.display="none";
             document.getElementById("personError").innerHTML="";
-            
+            setRating();
         }
 
         function cancelModal(ev) {
@@ -140,7 +140,7 @@ var app = {
             document.getElementById('itemImg').innerHTML="";
             document.getElementById("saveAddReview").style.display="none";
             document.getElementById("personError").innerHTML="";
-            
+            setRating();
             
         }
         
@@ -230,7 +230,7 @@ var app = {
                     document.getElementById("saveAddReview").style.display="none";
                     document.getElementById("personError").innerHTML="";
                     app.currentReview = null;
-                    
+                    setRating();
                 }
                 else {
                     document.getElementById("personError").innerHTML= "Please enter an item name.";

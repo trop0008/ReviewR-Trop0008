@@ -86,7 +86,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		BzC+Exa4BpFEC6osROmSuF/VBSI=
+		6wFacNLnI4Cw6y39WAEC5blL2w0=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		R6yaljDvIgTb7aZmzMapmzsbBNk=
+		ztOrEaUw0BL1g9cJhOqEuQt27+w=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -158,7 +158,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		zehKb/0BeqPZFi+gPRhGDR/SMPw=
+		tL3cXU63uXmk4/BXOiXH4Fbkwfc=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -254,7 +254,7 @@
 		</data>
 		<key>www/js/index.js</key>
 		<data>
-		HyYne7vVvkw3c8gdRSYVGU/gt20=
+		taZ57PVpJo2OJmm4RVrO3KMuT/4=
 		</data>
 		<key>www/js/moment-with-locales.js</key>
 		<data>
@@ -523,11 +523,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BzC+Exa4BpFEC6osROmSuF/VBSI=
+			6wFacNLnI4Cw6y39WAEC5blL2w0=
 			</data>
 			<key>hash2</key>
 			<data>
-			kyBE+z2kgXpGNouUpT0990PpgZ/SV2D+escWaL6SlUg=
+			8bSdbcqQ68lHYvQL8zBuCsf1UoYVCsC+Nb6X3TMmU0k=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -545,11 +545,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			R6yaljDvIgTb7aZmzMapmzsbBNk=
+			ztOrEaUw0BL1g9cJhOqEuQt27+w=
 			</data>
 			<key>hash2</key>
 			<data>
-			j1iWCy+n1u+L9CIHSODs6ZyqsJE6afPaFH573EV0+J0=
+			qx77GCLcPpXQeeNjKfJCvpV2qZ9SVMaUNT5Hu03qWxM=
 			</data>
 		</dict>
 		<key>LaunchImage-568h@2x.png</key>
@@ -710,11 +710,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zehKb/0BeqPZFi+gPRhGDR/SMPw=
+			tL3cXU63uXmk4/BXOiXH4Fbkwfc=
 			</data>
 			<key>hash2</key>
 			<data>
-			wBCQhFnCpsWPqiePlz/ojdnx9LaTRM+sVgpAEiY/vLE=
+			QYQawaI7l4a/Ro5z4ErdpvFfEC4ipBX6dNBf3iLiFvM=
 			</data>
 		</dict>
 		<key>archived-expanded-entitlements.xcent</key>
@@ -963,11 +963,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HyYne7vVvkw3c8gdRSYVGU/gt20=
+			taZ57PVpJo2OJmm4RVrO3KMuT/4=
 			</data>
 			<key>hash2</key>
 			<data>
-			ehVeFaS385u+y+WProq5p1akY83tZjptG56JjbtE94k=
+			KmMCGztstX+UFk52/VNgTfFsOAQ3zmSjNFj2XzZmTzU=
 			</data>
 		</dict>
 		<key>www/js/moment-with-locales.js</key>
